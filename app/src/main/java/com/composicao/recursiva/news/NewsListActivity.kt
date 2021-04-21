@@ -1,4 +1,4 @@
-package com.composicao.recursiva
+package com.composicao.recursiva.news
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +8,9 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.composicao.recursiva.modelos.News
+import com.composicao.recursiva.R
+import com.composicao.recursiva.create.CreateUserActivity
+import com.composicao.recursiva.news.modelos.News
 
 class NewsListActivity : AppCompatActivity() {
 
@@ -35,7 +37,8 @@ class NewsListActivity : AppCompatActivity() {
     private fun setupButtonRegister() {
         val button = findViewById<Button>(R.id.button_register)
         button.setOnClickListener {
-            Log.i("MainActivity", "Iniciar nova tela")
+            val intent = CreateUserActivity.createIntent(this)
+            startActivity(intent)
         }
     }
 
@@ -52,6 +55,6 @@ class NewsListActivity : AppCompatActivity() {
     }
 
     private fun newsClickListenerAction(selected: News) {
-        Log.i("MainActivity", "Recebeu informações: $selected")
+        Log.i("MainActivity", "Clicou na noticia: $selected")
     }
 }

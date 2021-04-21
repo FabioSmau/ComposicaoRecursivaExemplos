@@ -1,6 +1,6 @@
-package com.composicao.recursiva.repositorios
+package com.composicao.recursiva.news.repositorios
 
-import com.composicao.recursiva.modelos.News
+import com.composicao.recursiva.news.modelos.News
 
 typealias NewsListCallback = (List<News>) -> Unit
 

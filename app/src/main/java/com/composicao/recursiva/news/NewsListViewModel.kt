@@ -1,8 +1,8 @@
-package com.composicao.recursiva
+package com.composicao.recursiva.news
 
 import androidx.lifecycle.*
-import com.composicao.recursiva.modelos.News
-import com.composicao.recursiva.repositorios.NewsListRepository
+import com.composicao.recursiva.news.modelos.News
+import com.composicao.recursiva.news.repositorios.NewsListRepository
 
 class NewsListViewModel(
     private val repository: NewsListRepository = NewsListRepository()

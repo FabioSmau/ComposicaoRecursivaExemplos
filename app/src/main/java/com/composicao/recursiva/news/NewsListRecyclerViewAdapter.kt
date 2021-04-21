@@ -1,11 +1,12 @@
-package com.composicao.recursiva
+package com.composicao.recursiva.news
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.composicao.recursiva.modelos.News
+import com.composicao.recursiva.R
+import com.composicao.recursiva.news.modelos.News
 
 typealias OnClickListener = (News) -> Unit
 

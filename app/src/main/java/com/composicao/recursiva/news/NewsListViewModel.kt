@@ -3,9 +3,10 @@ package com.composicao.recursiva.news
 import androidx.lifecycle.*
 import com.composicao.recursiva.news.modelos.News
 import com.composicao.recursiva.news.repositorios.NewsListRepository
+import com.composicao.recursiva.news.repositorios.NewsListRepositoryFactory
 
 class NewsListViewModel(
-    private val repository: NewsListRepository = NewsListRepository()
+    private val remoteRepository: NewsListRepository = NewsListRepositoryFactory.create()
 ) : ViewModel(), LifecycleObserver {
 
     private val news = MutableLiveData<List<News>>()
@@ -16,7 +17,7 @@ class NewsListViewModel(
     }
 
     private fun fetchNewsFromRepository() {
-        repository.getNews {
+        remoteRepository.getNews {
             news.value = it
         }
     }

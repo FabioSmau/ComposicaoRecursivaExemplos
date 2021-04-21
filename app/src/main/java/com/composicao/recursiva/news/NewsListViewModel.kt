@@ -10,7 +10,7 @@ class NewsListViewModel(
 
     private val news = MutableLiveData<List<News>>()
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun startViewModel() {
         fetchNewsFromRepository()
     }

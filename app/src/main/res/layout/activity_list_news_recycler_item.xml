@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".NewsListActivity">
+    tools:context=".news.NewsListActivity">
 
     <TextView
         android:id="@+id/text_view_news_title"
